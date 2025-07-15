@@ -1,0 +1,1 @@
+// Định nghĩa type cho Event nếu cần mở rộng 

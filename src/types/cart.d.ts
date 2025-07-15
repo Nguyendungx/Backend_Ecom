@@ -1,0 +1,1 @@
+// Định nghĩa type cho Cart nếu cần mở rộng 

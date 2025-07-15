@@ -1,0 +1,1 @@
+// Service cho Favorite, có thể thêm logic nghiệp vụ ở đây 

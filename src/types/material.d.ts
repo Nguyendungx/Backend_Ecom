@@ -1,0 +1,1 @@
+// Định nghĩa type cho Material nếu cần mở rộng 

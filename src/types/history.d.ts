@@ -1,0 +1,1 @@
+// Định nghĩa type cho History nếu cần mở rộng 

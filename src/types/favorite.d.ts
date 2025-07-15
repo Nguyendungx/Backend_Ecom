@@ -1,0 +1,1 @@
+// Định nghĩa type cho Favorite nếu cần mở rộng 

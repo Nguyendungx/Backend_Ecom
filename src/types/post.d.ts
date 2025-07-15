@@ -1,0 +1,1 @@
+// Định nghĩa type cho Post nếu cần mở rộng 

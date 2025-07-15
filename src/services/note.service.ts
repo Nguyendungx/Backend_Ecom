@@ -1,0 +1,1 @@
+// Service cho Note, có thể thêm logic nghiệp vụ ở đây 

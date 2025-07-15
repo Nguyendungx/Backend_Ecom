@@ -1,0 +1,1 @@
+// Định nghĩa type cho Comment nếu cần mở rộng 

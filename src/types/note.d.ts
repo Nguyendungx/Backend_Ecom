@@ -1,0 +1,1 @@
+// Định nghĩa type cho Note nếu cần mở rộng 

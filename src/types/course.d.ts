@@ -1,0 +1,1 @@
+// Định nghĩa type cho Course nếu cần mở rộng 

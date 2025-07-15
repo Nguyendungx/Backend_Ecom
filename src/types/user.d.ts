@@ -1,0 +1,1 @@
+// Định nghĩa type cho User nếu cần mở rộng 
