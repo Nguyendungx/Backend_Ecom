@@ -1,5 +1,6 @@
 // Nếu gặp lỗi linter: Cannot find module 'express', hãy chạy: npm install express @types/express
 import express from 'express';
+import cors from 'cors';
 import courseRoute from './routes/course.route';
 import materialRoute from './routes/material.route';
 import eventRoute from './routes/event.route';
@@ -11,6 +12,7 @@ import commentRoute from './routes/comment.route';
 import historyRoute from './routes/history.route';
 import favoriteRoute from './routes/favorite.route';
 import authRoute from './routes/auth.route';
+import chatRoute from './routes/chat.route';
 import swaggerJsdoc from 'swagger-jsdoc';
 import swaggerUi from 'swagger-ui-express';
 
@@ -23,7 +25,7 @@ const swaggerOptions = {
       description: 'API documentation for Ecom Study backend',
     },
     servers: [
-      { url: 'http://localhost:3000' }
+      { url: 'http://localhost:8000' }
     ],
     components: {
       securitySchemes: {
@@ -45,6 +47,18 @@ const swaggerSpec = swaggerJsdoc(swaggerOptions);
 
 const app = express();
 
+// Configure CORS
+app.use(cors({
+  origin: (origin, callback) => {
+    // Cho phép tất cả origin
+    callback(null, true);
+  },
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With']
+}));
+
+
 app.use(express.json());
 app.use('/api/courses', courseRoute);
 app.use('/api/materials', materialRoute);
@@ -57,6 +71,7 @@ app.use('/api/comments', commentRoute);
 app.use('/api/histories', historyRoute);
 app.use('/api/favorites', favoriteRoute);
 app.use('/api/auth', authRoute);
+app.use('/api/chat', chatRoute);
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 export default app;
